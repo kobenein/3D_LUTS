@@ -1,0 +1,25 @@
+{
+    "name": "test",
+    "nfs":[4,8,16,24,40],
+    "restore_from": null,
+    "dataset": {
+        "XY_npz": "./DATA/gamma(1.100)_256.npz",
+        "input_image": "",
+        "ground_truth_image": ""
+    },
+    "parameter": {
+        "epoch": 10,
+        "EarlyStopping": 2000,
+        "kernel_initializer": "glorot_uniform",
+        "Optimizers": [
+            "Adamax",
+            "SGD"
+        ],
+        "learning_rate": 0.01,
+        "schedules": [
+            "CosineDecayRestarts",
+            null,
+            "ExponentialDecay"
+        ]
+    }
+}

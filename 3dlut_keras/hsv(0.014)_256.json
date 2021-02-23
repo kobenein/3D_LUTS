@@ -1,0 +1,25 @@
+{
+    "name": "hsv(0.014)_256",
+    "nfs":[4,8,16,24,40],
+    "restore_from": "/home/kobe_nein/3dlut_keras/experiments/hsv(0.014)_256_20201007/best.hdf5",
+    "dataset": {
+        "XY_npz": "./DATA/hsv(0.014)_256.npz",
+        "input_image": "",
+        "ground_truth_image": ""
+    },
+    "parameter": {
+        "epoch": 100000,
+        "EarlyStopping": 2000,
+        "kernel_initializer": "glorot_uniform",
+        "Optimizers": [
+            "Adamax",
+            "SGD"
+        ],
+        "learning_rate": 0.001,
+        "schedules": [
+            "CosineDecayRestarts",
+            null,
+            "ExponentialDecay"
+        ]
+    }
+}
